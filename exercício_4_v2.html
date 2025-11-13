@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 4 - Salário com Aumento</title>
+</head>
+<body>
+  <script>
+    let salarioInicial = parseFloat(prompt("Digite o salário inicial do funcionário (ex: 1000):"));
+    let anoInicial = 1995;
+    let salario = salarioInicial;
+    let aumento = 0.015;
+
+    for (let ano = 1996; ano <= 2025; ano++) {
+      salario += salario * aumento;
+
+      if (aumento < 0.15) {
+        aumento *= 2;
+      }
+    }
+
+    document.write(`<h2>Salário atual em 2025: R$ ${salario.toFixed(2)}</h2>`);
+  </script>
+</body>
+</html>
